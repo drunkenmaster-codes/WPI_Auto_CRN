@@ -94,7 +94,7 @@ def addOnTime():
 def startOnTime():
     ''' Execute when delta-time = 0 or < 0'''
     localTimeToExec = addOnTime()
-    while True:addCRN()
+    while True:
         dateSTR = datetime.datetime.now().strftime("%H:%M")
         if dateSTR == localTimeToExec or \
             int(localTimeToExec[0:localTimeToExec.find(':')-1]) > int(dateSTR[0:dateSTR.find(':')-1]) or \
@@ -107,7 +107,8 @@ def startOnTime():
             print("Sleeping zzzzzzzz.")
             sleep(10)       
 
-def addCRN(crnlist):
-
+#def addCRN(crnlist):
+    
 
 #openBrowser()    
+startOnTime()
